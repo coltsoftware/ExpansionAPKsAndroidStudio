@@ -2,8 +2,8 @@ Importing the google play expansion library to Android Studio isn't easy and the
 
 So this is a library of pre-imported projects, which were first loaded in to eclipse, then the project imported to Android Studio:
 
-Google Play APK Expansion Library rev. 3
-Google Play Licensing Library rev. 2
+- Google Play APK Expansion Library rev. 3
+- Google Play Licensing Library rev. 2
 
 
 
