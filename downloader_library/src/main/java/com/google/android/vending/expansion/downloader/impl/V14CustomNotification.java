@@ -32,6 +32,7 @@ public class V14CustomNotification implements DownloadNotification.ICustomNotifi
     long mCurrentKB = -1;
     long mTimeRemaining;
     PendingIntent mPendingIntent;
+    private Notification.Builder builder;
 
     @Override
     public void setIcon(int icon) {
@@ -59,7 +60,8 @@ public class V14CustomNotification implements DownloadNotification.ICustomNotifi
 
     @Override
     public Notification updateNotification(Context c) {
-        Notification.Builder builder = new Notification.Builder(c);
+        if (builder == null)
+            builder = new Notification.Builder(c);
         builder.setContentTitle(mTitle);
         if (mTotalKB > 0 && -1 != mCurrentKB) {
             builder.setProgress((int) (mTotalKB >> 8), (int) (mCurrentKB >> 8), false);
