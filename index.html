@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Expansionapksandroidstudio by coltsoftware</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Expansionapksandroidstudio</h1>
+        <p>Android studio import of sampleDownloaderActivity, licensing, downloader library and zip file</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/coltsoftware/ExpansionAPKsAndroidStudio" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/coltsoftware/ExpansionAPKsAndroidStudio/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/coltsoftware/ExpansionAPKsAndroidStudio/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <p>Importing the google play expansion library to Android Studio isn't easy and the <a href="http://developer.android.com/google/play/expansion-files.html">documentation</a> only tells you how to do it with Eclipse.</p>
+
+<p>So this is a library of pre-imported projects, which were first loaded in to eclipse, then the project imported to Android Studio:</p>
+
+<ul>
+<li>Google Play APK Expansion Library rev. 3</li>
+<li>Google Play Licensing Library rev. 2</li>
+</ul>
+
+<h1>
+<a id="fixes" class="anchor" href="#fixes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fixes</h1>
+
+<p><code>my_fixes</code> branch contains patches to the original, which is found in <code>master</code>. I recommend using <code>my_fixes</code> branch.</p>
+
+<h2>
+<a id="zip-file" class="anchor" href="#zip-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Zip file</h2>
+
+<h3>
+<a id="patch-file-number" class="anchor" href="#patch-file-number" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Patch file number</h3>
+
+<p>If the patch obb version number differed from main file obb version number (very likely) then the code did not find the patch file as it used the main file number to create the patch file name.</p>
+
+<h2>
+<a id="downloader-library" class="anchor" href="#downloader-library" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Downloader library</h2>
+
+<h3>
+<a id="flickering-downloading-notification" class="anchor" href="#flickering-downloading-notification" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flickering downloading notification</h3>
+
+<p>Seen when the application is restoring it's own obb file.
+The notification builder wasn't reused, so a new notification was created at each progress step.</p>
+
+<h2>
+<a id="play-licensing" class="anchor" href="#play-licensing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Play licensing</h2>
+
+<h3>
+<a id="lvl-crash-on-lollipop" class="anchor" href="#lvl-crash-on-lollipop" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LVL crash on lollipop</h3>
+
+<blockquote>
+<p>java.lang.IllegalArgumentException: Service Intent must be explicit: Intent { act=com.android.vending.licensing.ILicensingService }</p>
+</blockquote>
+
+<p>Thanks to <a href="http://stackoverflow.com/questions/28305125/android-app-crashes-on-lollipop">http://stackoverflow.com/questions/28305125/android-app-crashes-on-lollipop</a></p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/coltsoftware">coltsoftware</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
